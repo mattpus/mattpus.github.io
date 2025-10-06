@@ -1,5 +1,9 @@
-Here you can say lots of fun things about your site.
+I never planned to become a developer. 
 
-Maybe say a some things about yourself.
+For most of my life, I was a musician — obsessed with rhythm, flow, and emotion. 
 
-Or maybe what you plan to blog about.
+Then, somewhere along the way, I fell in love with code.
+
+On this blog, I share what I’m learning about iOS development, system design, and the new frontier where AI meets code. 
+
+Let’s build something beautiful — one composition at a time.
