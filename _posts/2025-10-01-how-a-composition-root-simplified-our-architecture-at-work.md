@@ -1,4 +1,4 @@
-#How a Composition Root Simplified Our Architecture at Work
+# 🕸️How a Composition Root Simplified Our Architecture at Work
 
 When developing software features, it’s easy to fall into the trap of short-term decisions that later become long-term complexity. At first, everything seems manageable—requirements are clear enough, dependencies are minimal, and the code flows logically. But as features evolve and start interacting, things can get messy fast.
 This is a story of how I used the composition root pattern to untangle a growing web of features in a module I was working on—and how it helped restore clarity and reusability to our codebase.
@@ -13,7 +13,8 @@ In our module, we had three separate entry points, each responsible for initiali
 
 ---
 
-##The Tangle: Hidden Coupling and Duplication
+## The Tangle: Hidden Coupling and Duplication
+
 The root of the problem was that each feature was acting like its own little application. They instantiated their own dependencies, unaware of the bigger picture. This led to:
 * Duplication of logic and configuration.
 * Hidden coupling, where changes in one feature’s dependency setup affected others in unpredictable ways.
@@ -21,7 +22,8 @@ The root of the problem was that each feature was acting like its own little app
 
 ---
 
-##The Shift: One Entry Point to Rule Them All
+## The Shift: One Entry Point to Rule Them All
+
 My first instinct was to consolidate the entry points. Instead of having three separate flows, we’d have one composition root—a single place where all dependencies are created and wired together.
 This change had a few immediate benefits:
 * Centralized configuration: All dependencies were created in one place, making it easier to manage and understand.
@@ -32,7 +34,8 @@ This change had a few immediate benefits:
 
 ---
 
-##The Composition Root: A Better Way to Wire Things Together
+## The Composition Root: A Better Way to Wire Things Together
+
 The composition root is a concept from dependency injection. It’s the place in your application where you compose the object graph—where you create and connect all your services, repositories, and other dependencies.
 By moving dependency creation to the composition root, we achieved:
 * Decoupling: Features no longer cared how their dependencies were created.
@@ -43,7 +46,8 @@ By moving dependency creation to the composition root, we achieved:
 
 ---
 
-##Lessons Learned
+## Lessons Learned
+
 Here are a few takeaways from this experience:
 1. Avoid premature encapsulation: Isolating features too early can lead to duplication and coupling.
 2. Centralize dependency creation: A composition root helps maintain clarity and control.
@@ -52,6 +56,7 @@ Here are a few takeaways from this experience:
 
 ---
 
-##Final Thoughts
+## Final Thoughts
+
 Untangling features isn’t just about refactoring—it’s about rethinking how your application is structured. The composition root gave us a way to step back, see the bigger picture, and build a more maintainable, scalable system.
 If you’re struggling with feature duplication or tangled dependencies, consider introducing a composition root. It might just be the architectural reset your project needs.
